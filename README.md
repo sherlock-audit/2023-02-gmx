@@ -17,6 +17,6 @@ _\*subject to change before audit starts_
 
 TBD
 
-# About Knox Finance
+# About GMX
 
 TBD
