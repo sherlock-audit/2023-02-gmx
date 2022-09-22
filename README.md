@@ -15,6 +15,8 @@ _\*subject to change before audit starts_
 
 # Audit scope
 
+> 1,777 nSLOC in 43 contracts (subject to small changes)
+
 TBD
 
 # About GMX
