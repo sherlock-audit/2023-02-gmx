@@ -1,11 +1,11 @@
 # GMX contest details
 
-- 50,000 USDC main award pot\*
+- 86,000 USDC main award pot\*
 - Join [Sherlock Discord](https://discord.gg/MABEWyASkp)
 - Submit findings using the issue page in your private contest repo (label issues as med or high)
 - [Read for more details](https://docs.sherlock.xyz/audits/watsons)
-- Starts October 10, 2022 15:00 UTC
-- Ends October 24, 2022 15:00 UTC\*
+- Starts November 7, 2022 15:00 UTC
+- Ends December 2, 2022 15:00 UTC\*
 
 _\*subject to change before audit starts_
 
@@ -15,7 +15,7 @@ _\*subject to change before audit starts_
 
 # Audit scope
 
-> 1,777 nSLOC in 43 contracts (subject to small changes)
+> 4221 nSLOC (subject to changes)
 
 TBD
 
