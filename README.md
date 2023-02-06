@@ -48,7 +48,7 @@ After the initial setup:
 
 ## 
 
-# Audit scope
+# Audit Scope
 
 > 4221 nSLOC (subject to changes)
 
