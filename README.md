@@ -50,8 +50,6 @@ After the initial setup:
 
 # Audit Scope
 
-> 4221 nSLOC (subject to changes)
-
 TBD
 
 # About GMX
