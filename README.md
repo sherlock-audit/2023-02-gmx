@@ -6,7 +6,7 @@
 
 # Resources
 
-- [website](https://gmx.io/#/)
+- [Website](https://gmx.io/#/)
 
 # On-chain context
 
