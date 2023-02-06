@@ -20,13 +20,6 @@ REBASING TOKENS: None
 ADMIN: Restricted
 ```
 
-In case of restricted, by default Sherlock does not consider direct protocol rug pulls as a valid issue unless the protocol clearly describes in detail the conditions for these restrictions. 
-For contracts, owners, admins clearly distinguish the ones controlled by protocol vs user controlled. This helps watsons distinguish the risk factor. 
-Example: 
-* `ContractA.sol` is owned by the protocol. 
-* `admin` in `ContractB` is restricted to changing properties in `functionA` and should not be able to liquidate assets or affect user withdrawals in any way. 
-* `admin` in `ContractC` is user admin and is restricted to only `functionB`
-
 ## Roles
 
 Roles are managed in the RoleStore, the RoleAdmin has access to grant and revoke any role.
@@ -36,6 +29,7 @@ The RoleAdmin will be the deployer initially, but this should be removed after r
 After the initial setup:
 
 - Only the Timelock contract should have the RoleAdmin role
+- - New roles can be granted by timelock admins with a time delay
 - System values should only be set using the Config contract
 - No EOA should have a Controller role
 - Config keepers and timelock admins could potentially disrupt regular operation through the disabling of features, incorrect setting of values, whitelisting malicious tokens, abusing the positive price impact value, etc
