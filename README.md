@@ -10,8 +10,6 @@
 
 # On-chain context
 
-TO FILL IN BY PROTOCOL
-
 ```
 DEPLOYMENT: Arbitrum, Avalanche
 ERC20: [e.g. any, none, USDC, USDC and USDT]
