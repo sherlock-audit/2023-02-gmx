@@ -12,7 +12,7 @@
 
 ```
 DEPLOYMENT: Arbitrum, Avalanche
-ERC20: [e.g. any, none, USDC, USDC and USDT]
+ERC20: Whitelisted
 ERC721: None
 ERC777: None
 FEE-ON-TRANSFER: None
