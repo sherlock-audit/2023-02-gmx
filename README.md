@@ -56,7 +56,7 @@ After the initial setup:
 
 ## Files in Scope
 
-All files in the `/contracts` folder, excluding:
+All files in the /contracts folder, excluding:
 
 - /contracts/mock
 - /contracts/reader
