@@ -50,9 +50,9 @@ After the initial setup:
 
 # Audit Scope
 
-Repository: https://github.com/gmx-io/gmx-synthetics
-Branch: `main`
-Commit Hash: `8028cb8022b85174be861b311f1082b5b76239df`
+- Repository: https://github.com/gmx-io/gmx-synthetics
+- Branch: `main`
+- Commit Hash: `8028cb8022b85174be861b311f1082b5b76239df`
 
 ## Files in Scope
 
