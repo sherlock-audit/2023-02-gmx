@@ -29,7 +29,7 @@ The RoleAdmin will be the deployer initially, but this should be removed after r
 After the initial setup:
 
 - Only the Timelock contract should have the RoleAdmin role
-- - New roles can be granted by timelock admins with a time delay
+- New roles can be granted by timelock admins with a time delay
 - System values should only be set using the Config contract
 - No EOA should have a Controller role
 - Config keepers and timelock admins could potentially disrupt regular operation through the disabling of features, incorrect setting of values, whitelisting malicious tokens, abusing the positive price impact value, etc
