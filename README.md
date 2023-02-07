@@ -50,7 +50,24 @@ After the initial setup:
 
 # Audit Scope
 
-TBD
+Repository: https://github.com/gmx-io/gmx-synthetics
+Branch: `main`
+Commit Hash: `8028cb8022b85174be861b311f1082b5b76239df`
+
+## Files in Scope
+
+All files in the `/contracts` folder, excluding:
+
+- /contracts/mock
+- /contracts/reader
+- /contracts/test
+- /contracts/event
+- /contracts/deposit/DepositEventUtils.sol
+- /contracts/market/MarketEventUtils.sol
+- /contracts/order/OrderEventUtils.sol
+- /contracts/position/PositionEventUtils.sol
+- /contracts/referral/ReferralEventUtils.sol
+- /contracts/withdrawal/WithdrawalEventUtils.sol
 
 # About GMX
 
