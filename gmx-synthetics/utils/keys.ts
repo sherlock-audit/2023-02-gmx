@@ -1,0 +1,238 @@
+import { hashString, hashData } from "./hash";
+
+export const WNT = hashString("WNT");
+export const NONCE = hashString("NONCE");
+export const MAX_LEVERAGE = hashString("MAX_LEVERAGE");
+
+export const FEE_RECEIVER = hashString("FEE_RECEIVER");
+
+export const MARKET_LIST = hashString("MARKET_LIST");
+
+export const DEPOSIT_LIST = hashString("DEPOSIT_LIST");
+export const ACCOUNT_DEPOSIT_LIST = hashString("ACCOUNT_DEPOSIT_LIST");
+
+export const WITHDRAWAL_LIST = hashString("WITHDRAWAL_LIST");
+export const ACCOUNT_WITHDRAWAL_LIST = hashString("ACCOUNT_WITHDRAWAL_LIST");
+
+export const POSITION_LIST = hashString("POSITION_LIST");
+export const ACCOUNT_POSITION_LIST = hashString("ACCOUNT_POSITION_LIST");
+
+export const ORDER_LIST = hashString("ORDER_LIST");
+export const ACCOUNT_ORDER_LIST = hashString("ACCOUNT_ORDER_LIST");
+
+export const CLAIMABLE_FEE_AMOUNT = hashString("CLAIMABLE_FEE_AMOUNT");
+export const CLAIMABLE_FUNDING_AMOUNT = hashString("CLAIMABLE_FUNDING_AMOUNT");
+
+export const IS_MARKET_DISABLED = hashString("IS_MARKET_DISABLED");
+
+export const MIN_ORACLE_BLOCK_CONFIRMATIONS = hashString("MIN_ORACLE_BLOCK_CONFIRMATIONS");
+export const MAX_ORACLE_PRICE_AGE = hashString("MAX_ORACLE_PRICE_AGE");
+export const MIN_ORACLE_SIGNERS = hashString("MIN_ORACLE_SIGNERS");
+
+export const MIN_COLLATERAL_FACTOR = hashString("MIN_COLLATERAL_FACTOR");
+export const MIN_COLLATERAL_USD = hashString("MIN_COLLATERAL_USD");
+
+export const SWAP_FEE_RECEIVER_FACTOR = hashString("SWAP_FEE_RECEIVER_FACTOR");
+
+export const TOKEN_TRANSFER_GAS_LIMIT = hashString("TOKEN_TRANSFER_GAS_LIMIT");
+export const NATIVE_TOKEN_TRANSFER_GAS_LIMIT = hashString("NATIVE_TOKEN_TRANSFER_GAS_LIMIT");
+
+export const PRICE_FEED = hashString("PRICE_FEED");
+export const PRICE_FEED_MULTIPLIER = hashString("PRICE_FEED_MULTIPLIER");
+export const STABLE_PRICE = hashString("STABLE_PRICE");
+
+export const ORACLE_TYPE = hashString("ORACLE_TYPE");
+export const RESERVE_FACTOR = hashString("RESERVE_FACTOR");
+export const MAX_PNL_FACTOR = hashString("MAX_PNL_FACTOR");
+export const MAX_PNL_FACTOR_FOR_TRADERS = hashString("MAX_PNL_FACTOR_FOR_TRADERS");
+export const MAX_PNL_FACTOR_FOR_ADL = hashString("MAX_PNL_FACTOR_FOR_ADL");
+export const MIN_PNL_FACTOR_AFTER_ADL = hashString("MIN_PNL_FACTOR_AFTER_ADL");
+export const MAX_PNL_FACTOR_FOR_DEPOSITS = hashString("MAX_PNL_FACTOR_FOR_DEPOSITS");
+export const MAX_PNL_FACTOR_FOR_WITHDRAWALS = hashString("MAX_PNL_FACTOR_FOR_WITHDRAWALS");
+
+export const SWAP_FEE_FACTOR = hashString("SWAP_FEE_FACTOR");
+export const SWAP_IMPACT_FACTOR = hashString("SWAP_IMPACT_FACTOR");
+export const SWAP_IMPACT_EXPONENT_FACTOR = hashString("SWAP_IMPACT_EXPONENT_FACTOR");
+export const POOL_AMOUNT = hashString("POOL_AMOUNT");
+export const MAX_POOL_AMOUNT = hashString("MAX_POOL_AMOUNT");
+export const MAX_OPEN_INTEREST = hashString("MAX_OPEN_INTEREST");
+export const SWAP_IMPACT_POOL_AMOUNT = hashString("SWAP_IMPACT_POOL_AMOUNT");
+
+export const POSITION_IMPACT_FACTOR = hashString("POSITION_IMPACT_FACTOR");
+export const POSITION_IMPACT_EXPONENT_FACTOR = hashString("POSITION_IMPACT_EXPONENT_FACTOR");
+export const MAX_POSITION_IMPACT_FACTOR = hashString("MAX_POSITION_IMPACT_FACTOR");
+export const POSITION_FEE_FACTOR = hashString("POSITION_FEE_FACTOR");
+
+export const LATEST_ADL_BLOCK = hashString("LATEST_ADL_BLOCK");
+export const IS_ADL_ENABLED = hashString("IS_ADL_ENABLED");
+
+export const FUNDING_FACTOR = hashString("FUNDING_FACTOR");
+export const FUNDING_EXPONENT_FACTOR = hashString("FUNDING_EXPONENT_FACTOR");
+
+export const BORROWING_FACTOR = hashString("BORROWING_FACTOR");
+export const BORROWING_EXPONENT_FACTOR = hashString("BORROWING_EXPONENT_FACTOR");
+
+export const ESTIMATED_GAS_FEE_BASE_AMOUNT = hashString("ESTIMATED_GAS_FEE_BASE_AMOUNT");
+export const ESTIMATED_GAS_FEE_MULTIPLIER_FACTOR = hashString("ESTIMATED_GAS_FEE_MULTIPLIER_FACTOR");
+
+export const EXECUTION_GAS_FEE_BASE_AMOUNT = hashString("EXECUTION_GAS_FEE_BASE_AMOUNT");
+export const EXECUTION_GAS_FEE_MULTIPLIER_FACTOR = hashString("EXECUTION_GAS_FEE_MULTIPLIER_FACTOR");
+
+export const DEPOSIT_GAS_LIMIT = hashString("DEPOSIT_GAS_LIMIT");
+export const WITHDRAWAL_GAS_LIMIT = hashString("WITHDRAWAL_GAS_LIMIT");
+export const SINGLE_SWAP_GAS_LIMIT = hashString("SINGLE_SWAP_GAS_LIMIT");
+export const INCREASE_ORDER_GAS_LIMIT = hashString("INCREASE_ORDER_GAS_LIMIT");
+export const DECREASE_ORDER_GAS_LIMIT = hashString("DECREASE_ORDER_GAS_LIMIT");
+export const SWAP_ORDER_GAS_LIMIT = hashString("SWAP_ORDER_GAS_LIMIT");
+
+export function accountDepositListKey(account) {
+  return hashData(["bytes32", "address"], [ACCOUNT_DEPOSIT_LIST, account]);
+}
+
+export function accountWithdrawalListKey(account) {
+  return hashData(["bytes32", "address"], [ACCOUNT_WITHDRAWAL_LIST, account]);
+}
+
+export function accountPositionListKey(account) {
+  return hashData(["bytes32", "address"], [ACCOUNT_POSITION_LIST, account]);
+}
+
+export function accountOrderListKey(account) {
+  return hashData(["bytes32", "address"], [ACCOUNT_ORDER_LIST, account]);
+}
+
+export function isMarketDisabledKey(market) {
+  return hashData(["bytes32", "address"], [IS_MARKET_DISABLED, market]);
+}
+
+export function claimableFeeAmountKey(market: string, token: string) {
+  return hashData(["bytes32", "address", "address"], [CLAIMABLE_FEE_AMOUNT, market, token]);
+}
+
+export function claimableFundingAmountKey(market: string, token: string, account: string) {
+  return hashData(["bytes32", "address", "address", "address"], [CLAIMABLE_FUNDING_AMOUNT, market, token, account]);
+}
+
+export function tokenTransferGasLimit(token: string) {
+  return hashData(["bytes32", "address"], [TOKEN_TRANSFER_GAS_LIMIT, token]);
+}
+
+export function priceFeedKey(token: string) {
+  return hashData(["bytes32", "address"], [PRICE_FEED, token]);
+}
+
+export function priceFeedMultiplierKey(token: string) {
+  return hashData(["bytes32", "address"], [PRICE_FEED_MULTIPLIER, token]);
+}
+
+export function stablePriceKey(token: string) {
+  return hashData(["bytes32", "address"], [STABLE_PRICE, token]);
+}
+
+export function oracleTypeKey(token: string) {
+  return hashData(["bytes32", "address"], [ORACLE_TYPE, token]);
+}
+
+export function minCollateralFactorKey(market: string, isLong: boolean) {
+  return hashData(["bytes32", "address", "bool"], [MIN_COLLATERAL_FACTOR, market, isLong]);
+}
+
+export function reserveFactorKey(market: string, isLong: boolean) {
+  return hashData(["bytes32", "address", "bool"], [RESERVE_FACTOR, market, isLong]);
+}
+
+export function maxPnlFactorKey(pnlFactorType: string, market: string, isLong: boolean) {
+  return hashData(["bytes32", "bytes32", "address", "bool"], [MAX_PNL_FACTOR, pnlFactorType, market, isLong]);
+}
+
+export function poolAmountKey(market: string, token: string) {
+  return hashData(["bytes32", "address", "address"], [POOL_AMOUNT, market, token]);
+}
+
+export function maxPoolAmountKey(market: string, token: string) {
+  return hashData(["bytes32", "address", "address"], [MAX_POOL_AMOUNT, market, token]);
+}
+
+export function maxOpenInterestKey(market: string, isLong: boolean) {
+  return hashData(["bytes32", "address", "bool"], [MAX_OPEN_INTEREST, market, isLong]);
+}
+
+export function swapImpactPoolAmountKey(market: string, token: string) {
+  return hashData(["bytes32", "address", "address"], [SWAP_IMPACT_POOL_AMOUNT, market, token]);
+}
+
+export function swapFeeFactorKey(market: string) {
+  return hashData(["bytes32", "address"], [SWAP_FEE_FACTOR, market]);
+}
+
+export function swapImpactFactorKey(market: string, isPositive: boolean) {
+  return hashData(["bytes32", "address", "bool"], [SWAP_IMPACT_FACTOR, market, isPositive]);
+}
+
+export function swapImpactExponentFactorKey(market: string) {
+  return hashData(["bytes32", "address"], [SWAP_IMPACT_EXPONENT_FACTOR, market]);
+}
+
+export function positionImpactFactorKey(market: string, isPositive: boolean) {
+  return hashData(["bytes32", "address", "bool"], [POSITION_IMPACT_FACTOR, market, isPositive]);
+}
+
+export function positionImpactExponentFactorKey(market: string) {
+  return hashData(["bytes32", "address"], [POSITION_IMPACT_EXPONENT_FACTOR, market]);
+}
+
+export function maxPositionImpactFactorKey(market: string, isPositive: boolean) {
+  return hashData(["bytes32", "address", "bool"], [MAX_POSITION_IMPACT_FACTOR, market, isPositive]);
+}
+
+export function positionFeeFactorKey(market: string) {
+  return hashData(["bytes32", "address"], [POSITION_FEE_FACTOR, market]);
+}
+
+export function latestAdlBlockKey(market: string, isLong: boolean) {
+  return hashData(["bytes32", "address", "bool"], [LATEST_ADL_BLOCK, market, isLong]);
+}
+
+export function isAdlEnabledKey(market: string, isLong: boolean) {
+  return hashData(["bytes32", "address", "bool"], [IS_ADL_ENABLED, market, isLong]);
+}
+
+export function fundingFactorKey(market: string) {
+  return hashData(["bytes32", "address"], [FUNDING_FACTOR, market]);
+}
+
+export function fundingExponentFactorKey(market: string) {
+  return hashData(["bytes32", "address"], [FUNDING_EXPONENT_FACTOR, market]);
+}
+
+export function borrowingFactorKey(market: string, isLong: boolean) {
+  return hashData(["bytes32", "address", "bool"], [BORROWING_FACTOR, market, isLong]);
+}
+
+export function borrowingExponentFactorKey(market: string, isLong: boolean) {
+  return hashData(["bytes32", "address", "bool"], [BORROWING_EXPONENT_FACTOR, market, isLong]);
+}
+
+export function depositGasLimitKey(singleToken: boolean) {
+  return hashData(["bytes32", "bool"], [DEPOSIT_GAS_LIMIT, singleToken]);
+}
+
+export function withdrawalGasLimitKey(singleToken: boolean) {
+  return hashData(["bytes32", "bool"], [WITHDRAWAL_GAS_LIMIT, singleToken]);
+}
+
+export function singleSwapGasLimitKey() {
+  return hashData(["bytes32"], [SINGLE_SWAP_GAS_LIMIT]);
+}
+
+export function increaseOrderGasLimitKey() {
+  return hashData(["bytes32"], [INCREASE_ORDER_GAS_LIMIT]);
+}
+
+export function decreaseOrderGasLimitKey() {
+  return hashData(["bytes32"], [DECREASE_ORDER_GAS_LIMIT]);
+}
+
+export function swapOrderGasLimitKey() {
+  return hashData(["bytes32"], [SWAP_ORDER_GAS_LIMIT]);
+}
